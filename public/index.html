@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Device Lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🔬 Device <span>Lab</span></h1>
+  <span class="pill"><span class="dot" id="devDot"></span><span id="devStatus">checking…</span></span>
+  <span id="appPill" class="pill" style="display:none">📦 <span id="appName"></span></span>
+  <div class="spacer"></div>
+  <select id="avdSelect"></select>
+  <button class="btn" id="startEmuBtn">Start emulator</button>
+</header>
+
+<main>
+  <!-- ============ LEFT: projects ============ -->
+  <div class="pane" id="leftPane">
+    <div class="pane-title">Projects</div>
+    <div class="src-tabs">
+      <button class="src-tab active" data-src="local">Local</button>
+      <button class="src-tab" data-src="github">GitHub</button>
+      <button class="src-tab" data-src="apk">APK</button>
+    </div>
+    <div class="add-form" id="formLocal">
+      <input type="text" id="localPath" placeholder="C:\path\to\project">
+      <button class="btn primary" onclick="addProject('local')">Add</button>
+    </div>
+    <div class="add-form" id="formGithub" style="display:none">
+      <input type="text" id="githubUrl" placeholder="https://github.com/owner/repo">
+      <button class="btn primary" onclick="addProject('github')">Clone</button>
+    </div>
+    <div class="add-form" id="formApk" style="display:none">
+      <input type="file" id="apkFile" accept=".apk" style="flex:1; font-size:12px">
+      <button class="btn primary" onclick="uploadApk()">Add</button>
+    </div>
+    <div id="projectList"></div>
+    <div class="pane-title">Build output</div>
+    <div id="buildLog"></div>
+  </div>
+
+  <!-- ============ CENTER: device ============ -->
+  <div class="pane" id="centerPane">
+    <div class="platform-tabs">
+      <button class="platform-tab active" data-plat="android" onclick="setPlatform('android')">🤖 Android · local emulator</button>
+      <button class="platform-tab" data-plat="ios" onclick="setPlatform('ios')">🍎 iOS · cloud simulator</button>
+    </div>
+
+    <div id="androidPanel">
+      <div class="phone">
+        <img id="screen" draggable="false" style="display:none">
+        <div class="screen-off" id="screenOff">
+          <div style="font-size:34px">📴</div>
+          <div id="screenOffMsg">Emulator offline — start it from the header</div>
+        </div>
+        <div class="navbar">
+          <button class="navbtn" title="Back" onclick="sendKey('back')">◁</button>
+          <button class="navbtn" title="Home" onclick="sendKey('home')">◯</button>
+          <button class="navbtn" title="Recents" onclick="sendKey('recents')">▢</button>
+        </div>
+      </div>
+      <div class="device-actions">
+        <input type="text" id="textSend" placeholder="Type text into focused field…">
+        <button class="btn" onclick="sendText()">Send</button>
+        <button class="btn" onclick="downloadScreenshot()">📸 Screenshot</button>
+        <button class="btn" onclick="relaunch()">↻ Relaunch app</button>
+      </div>
+    </div>
+
+    <div id="iosPanel" style="display:none">
+      <div class="card" id="iosHonesty">
+        <h3>How iOS works here</h3>
+        <p>iOS and its simulator only execute on Apple hardware — that's an Apple licensing/architecture
+        restriction, not a Windows limitation. Device Lab streams a <b>real iOS simulator running in the
+        cloud</b> (Appetize.io) into this panel: you interact with it exactly like the Android emulator,
+        and file bugs into the same tracker. "iOS emulators for Windows" found on the web are fakes.</p>
+      </div>
+      <div class="card" id="iosTokenCard">
+        <h3>1 · Connect Appetize (free tier)</h3>
+        <p>Create a free account at appetize.io, copy your API token from Account → API, paste it here.
+        It is stored only in this app's local data folder.</p>
+        <div style="display:flex; gap:8px">
+          <input type="text" id="iosToken" placeholder="Appetize API token" style="flex:1">
+          <button class="btn primary" onclick="saveIosToken()">Save</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>2 · Get an iOS build</h3>
+        <p>An iOS app must be compiled on macOS. For a GitHub repo, add this workflow — GitHub's free
+        macOS runners build the simulator <code>.app</code> and hand you a zip artifact to upload below.</p>
+        <div style="display:flex; gap:8px">
+          <input type="text" id="iosScheme" placeholder="Xcode scheme name" style="flex:1">
+          <button class="btn" onclick="downloadWorkflow()">⬇ Download workflow .yml</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>3 · Upload &amp; run (.zip of .app, or .ipa)</h3>
+        <div style="display:flex; gap:8px; margin-bottom:8px">
+          <input type="file" id="iosBundle" accept=".zip,.ipa,.app" style="flex:1; font-size:12px">
+          <button class="btn primary" onclick="uploadIos()">Upload to simulator</button>
+        </div>
+        <div id="iosApps"></div>
+      </div>
+      <div class="card" id="iosPlayerCard" style="display:none">
+        <h3 id="iosPlayerTitle">Simulator</h3>
+        <iframe id="iosFrame" allow="clipboard-read; clipboard-write"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RIGHT: logcat + bugs ============ -->
+  <div class="pane" id="rightPane">
+    <div class="right-tabs">
+      <button class="right-tab" data-tab="logcat" onclick="setTab('logcat')">Logcat</button>
+      <button class="right-tab active" data-tab="bugs" onclick="setTab('bugs')">🐞 Bugs <span id="bugCount"></span></button>
+    </div>
+    <div class="tab-body" id="tabLogcat" style="display:none">
+      <div id="logcatBar">
+        <input type="text" id="logcatFilter" placeholder="filter (text or tag)">
+        <button class="btn small" id="pauseLog" onclick="togglePause()">⏸</button>
+        <button class="btn small" onclick="clearLog()">Clear</button>
+      </div>
+      <div id="logcat"></div>
+    </div>
+    <div class="tab-body" id="tabBugs">
+      <div id="bugBar">
+        <button class="btn primary" onclick="openBugModal()">＋ New bug</button>
+        <div class="spacer"></div>
+        <select id="exportFmt">
+          <option value="md">Markdown</option>
+          <option value="zip">ZIP (report + screenshots)</option>
+          <option value="csv">CSV</option>
+          <option value="json">JSON</option>
+        </select>
+        <button class="btn" onclick="exportBugs()">Export</button>
+      </div>
+      <div id="bugList"></div>
+    </div>
+  </div>
+</main>
+
+<!-- bug modal -->
+<div id="modalWrap">
+  <div class="modal">
+    <h2 id="modalTitle">File a bug</h2>
+    <div class="hint">A screenshot, the last 200 logcat lines, device info, and the running app's
+    identity are attached automatically (Android).</div>
+    <label>Title</label>
+    <input type="text" id="bTitle" placeholder="Login button unresponsive on second tap">
+    <label>Severity</label>
+    <select id="bSeverity">
+      <option value="blocker">Blocker — crash / data loss / cannot proceed</option>
+      <option value="major">Major — feature broken, workaround exists</option>
+      <option value="minor" selected>Minor — incorrect but low impact</option>
+      <option value="cosmetic">Cosmetic — visual/UX polish</option>
+    </select>
+    <label>Area</label>
+    <input type="text" id="bArea" placeholder="UI / UX / functionality / performance / crash">
+    <label>Steps to reproduce</label>
+    <textarea id="bSteps" placeholder="1. Open app&#10;2. Tap …"></textarea>
+    <label>Expected</label>
+    <textarea id="bExpected"></textarea>
+    <label>Actual</label>
+    <textarea id="bActual"></textarea>
+    <label>Platform</label>
+    <select id="bPlatform"><option value="android">Android</option><option value="ios">iOS</option></select>
+    <div class="actions">
+      <button class="btn" onclick="closeBugModal()">Cancel</button>
+      <button class="btn primary" onclick="submitBug()">File bug</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast">
+  <span>💥 <b>Crash detected</b> in logcat</span>
+  <button class="btn small primary" onclick="fileCrashBug()">File bug</button>
+  <button class="btn small" onclick="hideToast()">Dismiss</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

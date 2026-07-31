@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# runtime data (bugs, projects, settings incl. API tokens, screenshots, uploads)
+data/
+
+# cloned / imported projects
+workspace/
+
+# test app build intermediates (probe.apk is kept; rebuild with testapp/build.sh)
+testapp/classes/
+testapp/dexout/
+testapp/base.apk
+testapp/aligned.apk
+testapp/debug.keystore
+testapp/export-test.zip
+
+# editor / OS noise
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+testapp/probe.apk.idsig
