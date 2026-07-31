@@ -5,7 +5,8 @@
     android:versionName="1.0">
   <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34"/>
   <application android:label="Lab Probe">
-    <activity android:name=".MainActivity" android:exported="true">
+    <activity android:name=".MainActivity" android:exported="true"
+        android:theme="@android:style/Theme.Material.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
