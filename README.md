@@ -169,12 +169,15 @@ workspace/         cloned repos (gitignored)
 
 ## Roadmap
 
-- [ ] macOS/Linux host support (paths are currently Windows-flavored)
-- [ ] scrcpy-based high-FPS screen streaming
-- [ ] Physical device support polish (USB devices already appear via adb)
-- [ ] Flutter build lane (`flutter build apk`) when the Flutter SDK is present
-- [ ] Remote Mac lane: drive `simctl` over SSH for a first-party iOS simulator
-- [ ] Session recording — replay taps as repro steps attached to bugs
+Tracked as [open issues](https://github.com/athompson83/device-lab/issues) —
+contributions welcome, the `good first issue` label marks the approachable ones.
+
+- [macOS/Linux host support](https://github.com/athompson83/device-lab/issues/1) *(good first issue)*
+- [scrcpy-based high-FPS screen streaming](https://github.com/athompson83/device-lab/issues/2)
+- [Physical device support polish](https://github.com/athompson83/device-lab/issues/3) *(good first issue)*
+- [Flutter build lane](https://github.com/athompson83/device-lab/issues/4)
+- [Remote Mac lane: first-party iOS simulator over SSH](https://github.com/athompson83/device-lab/issues/5)
+- [Session recording — replay taps as repro steps](https://github.com/athompson83/device-lab/issues/6)
 
 ## Contributing
 
