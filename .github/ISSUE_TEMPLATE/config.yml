@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 README — setup & architecture
+    url: https://github.com/athompson83/device-lab#readme
+    about: Setup instructions, API reference, and the iOS-on-PC explanation live here.

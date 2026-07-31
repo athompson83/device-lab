@@ -1,0 +1,35 @@
+name: 🐞 Bug report
+description: Something in Device Lab is broken
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: Host OS, Node version, Android SDK / emulator details.
+      placeholder: |
+        Host: Windows 11
+        Node: 22.x
+        AVD: Pixel 7, API 34 (x86_64)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Server output / API responses
+      description: Console output from `npm start`, and the JSON from http://localhost:4830/api/device if relevant.
+      render: text
+  - type: checkboxes
+    id: smoke
+    attributes:
+      label: Probe app smoke test
+      options:
+        - label: The testapp/probe.apk smoke test also fails
+        - label: The smoke test passes — only my scenario fails
