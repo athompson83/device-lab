@@ -163,6 +163,11 @@ async function deployApk(apkPath, project) {
   const badging = await android.apkBadging(apkPath);
   broadcast({ t: 'build', line: `Installing ${badging.package} to device…` });
   await android.installApk(apkPath);
+  if (project && (project.kind === 'expo' || project.kind === 'react-native')) {
+    // debug builds load JS from Metro on the host — bridge the port
+    await android.adb('reverse', 'tcp:8081', 'tcp:8081').catch(() => {});
+    broadcast({ t: 'build', line: 'Bridged port 8081 (adb reverse) — run "npx expo start" / Metro in the project for debug builds.' });
+  }
   broadcast({ t: 'build', line: 'Launching…' });
   await android.launchApp(badging.package, badging.launchable);
   state.currentApp = { ...badging, apk: apkPath };
