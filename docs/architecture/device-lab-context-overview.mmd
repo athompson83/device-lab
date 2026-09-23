@@ -1,0 +1,12 @@
+flowchart TB
+  subgraph Local[Local Device Lab process]
+    UI[Browser UI] <--> API[Express REST]
+    UI <--> WS[WebSocket]
+    API --> Android[Android SDK adapter]
+    Android <--> ADB[adb and emulator]
+    API --> Intake[Project intake and build]
+    API --> Tracker[Bug evidence and export]
+    Tracker --> RuntimeData[(data/)]
+    Intake --> Workspace[(workspace/)]
+  end
+  iOS[Cloud iOS simulator provider] -. external browser lane .-> UI

@@ -1,0 +1,10 @@
+flowchart LR
+  Browser[Plain browser UI] <-->|REST| Server[Node and Express on localhost:4830]
+  Browser <-->|frames input events| WS[WebSocket /ws]
+  Server --> Android[lib/android.js]
+  Android <-->|adb and emulator commands| Device[Android emulator or USB device]
+  Device -->|screen capture and logcat| Android
+  Server --> Projects[lib/projects.js]
+  Projects -->|clone build install launch| Workspace[Ignored local workspace and APKs]
+  Server --> Bugs[lib/bugs.js]
+  Bugs --> Data[(Ignored JSON records and screenshots)]

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "device-lab",
+  "sourceBranch": "main",
+  "sourceCommitSha": "ff660ad637cfa79145929e4f2e7ff594815533b2",
+  "tool": "Understand-Anything",
+  "toolRevision": "6df3065f1d8ddc2ce3615314d1d493f36d6b1c80",
+  "inventory": {
+    "fileCount": 18,
+    "filteredByIgnore": 0,
+    "privateRuntimePathsPresent": [],
+    "categoryCounts": {
+      "config": 5,
+      "docs": 2,
+      "code": 8,
+      "markup": 2,
+      "script": 1
+    },
+    "languageCounts": {
+      "yaml": 3,
+      "markdown": 2,
+      "javascript": 6,
+      "json": 1,
+      "html": 1,
+      "css": 1,
+      "xml": 1,
+      "java": 1,
+      "shell": 1,
+      "apk": 1
+    },
+    "languages": [
+      "CSS",
+      "HTML",
+      "JavaScript",
+      "Markdown",
+      "XML",
+      "YAML"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Express",
+      "ws",
+      "Multer",
+      "Archiver"
+    ]
+  },
+  "parser": {
+    "filesParsed": 14,
+    "filesSkipped": [
+      "public/index.html",
+      "public/style.css",
+      "testapp/AndroidManifest.xml",
+      "testapp/probe.apk"
+    ],
+    "unreadable": [],
+    "callGraphFilesWithResults": 7,
+    "inferredUniqueDirectCalls": 159,
+    "limitations": [
+      "HTML, CSS, XML, and APK entries had no parser result and are retained as file-level nodes.",
+      "Only unique direct same-file calls were connected; ambiguous and member calls were not converted."
+    ]
+  },
+  "graph": {
+    "nodeCount": 101,
+    "edgeCount": 184,
+    "importEdges": 3,
+    "layerCount": 7,
+    "tourStepCount": 8
+  },
+  "validation": {
+    "allInventoryPathsRepresented": true,
+    "allNodePathsInInventory": true,
+    "allEdgeEndpointsExist": true,
+    "everyNodeAssignedExactlyOnce": true,
+    "tourValid": true,
+    "runtimeDataExcluded": true
+  }
+}

@@ -1,0 +1,13 @@
+# Exclude runtime data containing tokens, uploads, device captures, or local project clones.
+data/
+workspace/
+node_modules/
+.ua/intermediate/
+.ua/tmp/
+.ua/knowledge-graph.json
+.ua/meta.json
+.ua/fingerprints.json
+docs/architecture/agent-context.md
+docs/architecture/agent-context-provenance.json
+docs/architecture/device-lab-context-overview.mmd
+docs/architecture/device-lab-local-runtime.mmd
