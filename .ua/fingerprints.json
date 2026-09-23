@@ -1,0 +1,888 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "ff660ad637cfa79145929e4f2e7ff594815533b2",
+  "generatedAt": "2026-09-23T19:48:21.256Z",
+  "files": {
+    ".github/ISSUE_TEMPLATE/bug_report.yml": {
+      "filePath": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "contentHash": "ea8763b4935f62e0c2cd3624d5a0b0541606722af80bbdbaa7dcdc1043818fce",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": false
+    },
+    ".github/ISSUE_TEMPLATE/config.yml": {
+      "filePath": ".github/ISSUE_TEMPLATE/config.yml",
+      "contentHash": "4cc5f01e570f3182fc99b619bca4fb145d785938610939741b4c2368f5e98df4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    ".github/ISSUE_TEMPLATE/feature_request.yml": {
+      "filePath": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "contentHash": "f364b1d58d57a43537bb4a691c3a6a2715466cef743d7276ef368774182d6bb5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": false
+    },
+    "CONTRIBUTING.md": {
+      "filePath": "CONTRIBUTING.md",
+      "contentHash": "62cc9840c9d2582a8a47b2b5e8eeb963af15c8b58da79ea5c2001ac379c268ba",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "e4af3a45b23d3c786775b5b869e0425b53449bf96575b6e2f40f4ccec1c60ce9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 111,
+      "hasStructuralAnalysis": false
+    },
+    "lib/android.js": {
+      "filePath": "lib/android.js",
+      "contentHash": "77bc526253f9660434bf7b97b462e83e33b5b2271778bff16516db0697e69208",
+      "functions": [
+        {
+          "name": "aapt2Path",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "run",
+          "params": [
+            "exe",
+            "args"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "adb",
+          "params": [
+            "...args"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "listAvds",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "listDevices",
+          "params": [],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "startEmulator",
+          "params": [
+            "avd"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "bootCompleted",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "deviceInfo",
+          "params": [],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "screencap",
+          "params": [],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "screenSize",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "inputTap",
+          "params": [
+            "x",
+            "y"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "inputSwipe",
+          "params": [
+            "x1",
+            "y1",
+            "x2",
+            "y2",
+            "ms"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "inputKey",
+          "params": [
+            "name"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "inputText",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "apkBadging",
+          "params": [
+            "apkPath"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "installApk",
+          "params": [
+            "apkPath"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "launchApp",
+          "params": [
+            "pkg",
+            "activity"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "stopApp",
+          "params": [
+            "pkg"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "streamLogcat",
+          "params": [
+            "onLine"
+          ],
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 150,
+      "hasStructuralAnalysis": true
+    },
+    "lib/bugs.js": {
+      "filePath": "lib/bugs.js",
+      "contentHash": "c237449efa8d48ce5c1cc0cadde6988e702a815098acfdff95947c692552e1d5",
+      "functions": [
+        {
+          "name": "load",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "save",
+          "params": [
+            "list"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "createBug",
+          "params": [
+            "fields",
+            "screenshotPng",
+            "logcatTail",
+            "device",
+            "app"
+          ],
+          "exported": false,
+          "lineCount": 28
+        },
+        {
+          "name": "updateBug",
+          "params": [
+            "id",
+            "patch"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "deleteBug",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "csvCell",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "exportBugs",
+          "params": [
+            "format"
+          ],
+          "exported": false,
+          "lineCount": 46
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 110,
+      "hasStructuralAnalysis": true
+    },
+    "lib/projects.js": {
+      "filePath": "lib/projects.js",
+      "contentHash": "860cae2f985aaa14b15fa55848699bb7fc2f9caba2a5bbfecaf204aed8376ada",
+      "functions": [
+        {
+          "name": "load",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "save",
+          "params": [
+            "list"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "detectKind",
+          "params": [
+            "dir"
+          ],
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "findBuildableSubprojects",
+          "params": [
+            "root",
+            "maxDepth"
+          ],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "findApks",
+          "params": [
+            "dir"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "addProject",
+          "params": [],
+          "exported": false,
+          "lineCount": 55
+        },
+        {
+          "name": "removeProject",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "streamCommand",
+          "params": [
+            "cmd",
+            "args",
+            "cwd",
+            "onLine"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "buildProject",
+          "params": [
+            "project",
+            "onLine"
+          ],
+          "exported": false,
+          "lineCount": 22
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 192,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "8826bd951cf350080604e75bb24f14087706dec1e012574951599d6d17cbb5b4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": false
+    },
+    "public/app.js": {
+      "filePath": "public/app.js",
+      "contentHash": "2bc4fbea98c7101afe22acd82619713d4bffd48e93508d6b6773e343e3af3cdf",
+      "functions": [
+        {
+          "name": "$",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "api",
+          "params": [
+            "url"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "connectWs",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "showFrame",
+          "params": [
+            "blob"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "relPos",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "sendKey",
+          "params": [
+            "name"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "sendText",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "downloadScreenshot",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "relaunch",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "refreshDevice",
+          "params": [],
+          "exported": false,
+          "lineCount": 24
+        },
+        {
+          "name": "loadProjects",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "addProject",
+          "params": [
+            "source"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "uploadApk",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "buildProject",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "installProject",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "removeProject",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "addBuild",
+          "params": [
+            "line",
+            "cls"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "addLogLine",
+          "params": [
+            "line"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "togglePause",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "clearLog",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "setTab",
+          "params": [
+            "name"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "setPlatform",
+          "params": [
+            "p"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "loadBugs",
+          "params": [],
+          "exported": false,
+          "lineCount": 24
+        },
+        {
+          "name": "openBugModal",
+          "params": [],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "closeBugModal",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "submitBug",
+          "params": [],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "toggleBug",
+          "params": [
+            "id",
+            "status"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "deleteBug",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "exportBugs",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "fileCrashBug",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "hideToast",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "loadIos",
+          "params": [],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "saveIosToken",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "uploadIos",
+          "params": [],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "playIos",
+          "params": [
+            "publicKey",
+            "name"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "downloadWorkflow",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "esc",
+          "params": [
+            "s"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 276,
+      "hasStructuralAnalysis": true
+    },
+    "public/index.html": {
+      "filePath": "public/index.html",
+      "contentHash": "e1cf6ec3e6a7b04b9b34d03ecbdca530bf1da53b72e5d9b283ae69d348018dbd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 186,
+      "hasStructuralAnalysis": false
+    },
+    "public/style.css": {
+      "filePath": "public/style.css",
+      "contentHash": "68467e020fb944babf9f69352617d7307296dfc661f680bd4d0703f38f835cf2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 159,
+      "hasStructuralAnalysis": false
+    },
+    "server.js": {
+      "filePath": "server.js",
+      "contentHash": "3b23602099d081351da8f73585de7244f48067daa5088547d143ba8a418c3c7a",
+      "functions": [
+        {
+          "name": "loadSettings",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "saveSettings",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "broadcast",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "screenLoop",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "ensureScreenLoop",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "deployApk",
+          "params": [
+            "apkPath",
+            "project"
+          ],
+          "exported": false,
+          "lineCount": 15
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 314,
+      "hasStructuralAnalysis": true
+    },
+    "testapp/AndroidManifest.xml": {
+      "filePath": "testapp/AndroidManifest.xml",
+      "contentHash": "7e44a6abd3ab29878332bf2898651780136030745f1f25edc239156980c59342",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "testapp/MainActivity.java": {
+      "filePath": "testapp/MainActivity.java",
+      "contentHash": "01354102a59666cc234122e01d099332c0f608d5c8a76848666162bdb717736c",
+      "functions": [
+        {
+          "name": "lp",
+          "params": [
+            "h",
+            "weight"
+          ],
+          "returnType": "LinearLayout.LayoutParams",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "onCreate",
+          "params": [
+            "savedInstanceState"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 70
+        }
+      ],
+      "classes": [
+        {
+          "name": "MainActivity",
+          "methods": [
+            "lp",
+            "onCreate"
+          ],
+          "properties": [
+            "count"
+          ],
+          "exported": true,
+          "lineCount": 81
+        }
+      ],
+      "imports": [
+        {
+          "source": "android.app.Activity",
+          "specifiers": [
+            "Activity"
+          ]
+        },
+        {
+          "source": "android.graphics.Color",
+          "specifiers": [
+            "Color"
+          ]
+        },
+        {
+          "source": "android.graphics.Typeface",
+          "specifiers": [
+            "Typeface"
+          ]
+        },
+        {
+          "source": "android.graphics.drawable.GradientDrawable",
+          "specifiers": [
+            "GradientDrawable"
+          ]
+        },
+        {
+          "source": "android.os.Bundle",
+          "specifiers": [
+            "Bundle"
+          ]
+        },
+        {
+          "source": "android.util.Log",
+          "specifiers": [
+            "Log"
+          ]
+        },
+        {
+          "source": "android.view.Gravity",
+          "specifiers": [
+            "Gravity"
+          ]
+        },
+        {
+          "source": "android.view.ViewGroup",
+          "specifiers": [
+            "ViewGroup"
+          ]
+        },
+        {
+          "source": "android.widget.Button",
+          "specifiers": [
+            "Button"
+          ]
+        },
+        {
+          "source": "android.widget.EditText",
+          "specifiers": [
+            "EditText"
+          ]
+        },
+        {
+          "source": "android.widget.LinearLayout",
+          "specifiers": [
+            "LinearLayout"
+          ]
+        },
+        {
+          "source": "android.widget.TextView",
+          "specifiers": [
+            "TextView"
+          ]
+        },
+        {
+          "source": "android.widget.Toast",
+          "specifiers": [
+            "Toast"
+          ]
+        }
+      ],
+      "exports": [
+        "MainActivity"
+      ],
+      "totalLines": 101,
+      "hasStructuralAnalysis": true
+    },
+    "testapp/build.sh": {
+      "filePath": "testapp/build.sh",
+      "contentHash": "c172452438bc6733b0476e97aa4c9b4bf838986d6d379958e2f4b4eff64b092d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": false
+    },
+    "testapp/probe.apk": {
+      "filePath": "testapp/probe.apk",
+      "contentHash": "7988876a601dd996430494de20fc82479307f92b7f832c5ae2cde0fac607ccf0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": false
+    },
+    "testapp/verify-ws.js": {
+      "filePath": "testapp/verify-ws.js",
+      "contentHash": "4015b602ad77c2a2d98961f5b1b8ca75b693857e4409a9e313513e10788d9420",
+      "functions": [
+        {
+          "name": "send",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "sleep",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

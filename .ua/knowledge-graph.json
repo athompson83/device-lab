@@ -1,0 +1,2658 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "device-lab",
+    "languages": [
+      "CSS",
+      "HTML",
+      "JavaScript",
+      "Markdown",
+      "XML",
+      "YAML"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Express",
+      "ws",
+      "Multer",
+      "Archiver"
+    ],
+    "description": "Local browser workspace for controlling Android devices, inspecting builds and logs, capturing evidence-rich defects, exporting reports, and coordinating an iOS simulator lane.",
+    "analyzedAt": "2026-09-23T19:48:05.106Z",
+    "gitCommitHash": "ff660ad637cfa79145929e4f2e7ff594815533b2"
+  },
+  "nodes": [
+    {
+      "id": "config:.github/ISSUE_TEMPLATE/bug_report.yml",
+      "type": "config",
+      "name": "bug_report.yml",
+      "filePath": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "summary": "yaml config at .github/ISSUE_TEMPLATE/bug_report.yml. Sections: name; description; labels; body.",
+      "tags": [
+        "config",
+        "config",
+        "yaml"
+      ]
+    },
+    {
+      "id": "config:.github/ISSUE_TEMPLATE/config.yml",
+      "type": "config",
+      "name": "config.yml",
+      "filePath": ".github/ISSUE_TEMPLATE/config.yml",
+      "summary": "yaml config at .github/ISSUE_TEMPLATE/config.yml. Sections: blank_issues_enabled; contact_links.",
+      "tags": [
+        "config",
+        "config",
+        "yaml"
+      ]
+    },
+    {
+      "id": "config:.github/ISSUE_TEMPLATE/feature_request.yml",
+      "type": "config",
+      "name": "feature_request.yml",
+      "filePath": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "summary": "yaml config at .github/ISSUE_TEMPLATE/feature_request.yml. Sections: name; description; labels; body.",
+      "tags": [
+        "config",
+        "config",
+        "yaml"
+      ]
+    },
+    {
+      "id": "document:CONTRIBUTING.md",
+      "type": "document",
+      "name": "CONTRIBUTING.md",
+      "filePath": "CONTRIBUTING.md",
+      "summary": "markdown document at CONTRIBUTING.md. Sections: Contributing to Device Lab; Getting set up; Making changes; Pull requests; Reporting bugs.",
+      "tags": [
+        "document",
+        "docs",
+        "markdown"
+      ]
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "markdown document at README.md. Sections: Device Lab; Why Device Lab exists; Core capabilities; Screenshots; Quick start.",
+      "tags": [
+        "document",
+        "docs",
+        "markdown"
+      ]
+    },
+    {
+      "id": "file:lib/android.js",
+      "type": "file",
+      "name": "android.js",
+      "filePath": "lib/android.js",
+      "summary": "javascript file at lib/android.js. Structural parser found 19 functions and 0 classes.",
+      "tags": [
+        "file",
+        "code",
+        "javascript"
+      ]
+    },
+    {
+      "id": "file:lib/bugs.js",
+      "type": "file",
+      "name": "bugs.js",
+      "filePath": "lib/bugs.js",
+      "summary": "javascript file at lib/bugs.js. Structural parser found 7 functions and 0 classes.",
+      "tags": [
+        "file",
+        "code",
+        "javascript"
+      ]
+    },
+    {
+      "id": "file:lib/projects.js",
+      "type": "file",
+      "name": "projects.js",
+      "filePath": "lib/projects.js",
+      "summary": "javascript file at lib/projects.js. Structural parser found 9 functions and 0 classes.",
+      "tags": [
+        "file",
+        "code",
+        "javascript"
+      ]
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "json config at package.json. Sections: name; version; description; main; scripts.",
+      "tags": [
+        "config",
+        "config",
+        "json"
+      ]
+    },
+    {
+      "id": "file:public/app.js",
+      "type": "file",
+      "name": "app.js",
+      "filePath": "public/app.js",
+      "summary": "javascript file at public/app.js. Structural parser found 37 functions and 0 classes.",
+      "tags": [
+        "file",
+        "code",
+        "javascript"
+      ]
+    },
+    {
+      "id": "file:public/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "public/index.html",
+      "summary": "html file at public/index.html. Structural parser skipped this format; inventory metadata retained.",
+      "tags": [
+        "file",
+        "markup",
+        "html",
+        "parser-skipped"
+      ]
+    },
+    {
+      "id": "file:public/style.css",
+      "type": "file",
+      "name": "style.css",
+      "filePath": "public/style.css",
+      "summary": "css file at public/style.css. Structural parser skipped this format; inventory metadata retained.",
+      "tags": [
+        "file",
+        "markup",
+        "css",
+        "parser-skipped"
+      ]
+    },
+    {
+      "id": "file:server.js",
+      "type": "file",
+      "name": "server.js",
+      "filePath": "server.js",
+      "summary": "javascript file at server.js. Structural parser found 6 functions and 0 classes.",
+      "tags": [
+        "file",
+        "code",
+        "javascript"
+      ]
+    },
+    {
+      "id": "config:testapp/AndroidManifest.xml",
+      "type": "config",
+      "name": "AndroidManifest.xml",
+      "filePath": "testapp/AndroidManifest.xml",
+      "summary": "xml config at testapp/AndroidManifest.xml. Structural parser skipped this format; inventory metadata retained.",
+      "tags": [
+        "config",
+        "config",
+        "xml",
+        "parser-skipped"
+      ]
+    },
+    {
+      "id": "file:testapp/MainActivity.java",
+      "type": "file",
+      "name": "MainActivity.java",
+      "filePath": "testapp/MainActivity.java",
+      "summary": "java file at testapp/MainActivity.java. Structural parser found 2 functions and 1 classes.",
+      "tags": [
+        "file",
+        "code",
+        "java"
+      ]
+    },
+    {
+      "id": "file:testapp/build.sh",
+      "type": "file",
+      "name": "build.sh",
+      "filePath": "testapp/build.sh",
+      "summary": "shell file at testapp/build.sh. Structural metrics: {\"importCount\":0,\"exportCount\":0,\"functionCount\":0,\"classCount\":0}.",
+      "tags": [
+        "file",
+        "script",
+        "shell"
+      ]
+    },
+    {
+      "id": "resource:testapp/probe.apk",
+      "type": "resource",
+      "name": "probe.apk",
+      "filePath": "testapp/probe.apk",
+      "summary": "apk resource at testapp/probe.apk. Structural parser skipped this format; inventory metadata retained.",
+      "tags": [
+        "resource",
+        "code",
+        "apk",
+        "parser-skipped"
+      ]
+    },
+    {
+      "id": "file:testapp/verify-ws.js",
+      "type": "file",
+      "name": "verify-ws.js",
+      "filePath": "testapp/verify-ws.js",
+      "summary": "javascript file at testapp/verify-ws.js. Structural parser found 2 functions and 0 classes.",
+      "tags": [
+        "file",
+        "code",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:aapt2Path",
+      "type": "function",
+      "name": "aapt2Path",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 12-16; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 18-21; parameters: exe, args.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:adb",
+      "type": "function",
+      "name": "adb",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 23-23; parameters: ...args.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:listAvds",
+      "type": "function",
+      "name": "listAvds",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 25-29; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:listDevices",
+      "type": "function",
+      "name": "listDevices",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 31-40; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:startEmulator",
+      "type": "function",
+      "name": "startEmulator",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 42-46; parameters: avd.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:bootCompleted",
+      "type": "function",
+      "name": "bootCompleted",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 48-53; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:deviceInfo",
+      "type": "function",
+      "name": "deviceInfo",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 55-66; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:screencap",
+      "type": "function",
+      "name": "screencap",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 70-79; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:screenSize",
+      "type": "function",
+      "name": "screenSize",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 81-85; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:inputTap",
+      "type": "function",
+      "name": "inputTap",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 91-91; parameters: x, y.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:inputSwipe",
+      "type": "function",
+      "name": "inputSwipe",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 92-94; parameters: x1, y1, x2, y2, ms.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:inputKey",
+      "type": "function",
+      "name": "inputKey",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 95-98; parameters: name.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:inputText",
+      "type": "function",
+      "name": "inputText",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 99-103; parameters: text.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:apkBadging",
+      "type": "function",
+      "name": "apkBadging",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 107-117; parameters: apkPath.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:installApk",
+      "type": "function",
+      "name": "installApk",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 119-122; parameters: apkPath.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:launchApp",
+      "type": "function",
+      "name": "launchApp",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 124-127; parameters: pkg, activity.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:stopApp",
+      "type": "function",
+      "name": "stopApp",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 129-129; parameters: pkg.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/android.js:streamLogcat",
+      "type": "function",
+      "name": "streamLogcat",
+      "filePath": "lib/android.js",
+      "summary": "Function at lines 133-143; parameters: onLine.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/bugs.js:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "lib/bugs.js",
+      "summary": "Function at lines 9-9; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/bugs.js:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "lib/bugs.js",
+      "summary": "Function at lines 10-10; parameters: list.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/bugs.js:createBug",
+      "type": "function",
+      "name": "createBug",
+      "filePath": "lib/bugs.js",
+      "summary": "Function at lines 12-39; parameters: fields, screenshotPng, logcatTail, device, app.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/bugs.js:updateBug",
+      "type": "function",
+      "name": "updateBug",
+      "filePath": "lib/bugs.js",
+      "summary": "Function at lines 41-49; parameters: id, patch.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/bugs.js:deleteBug",
+      "type": "function",
+      "name": "deleteBug",
+      "filePath": "lib/bugs.js",
+      "summary": "Function at lines 51-56; parameters: id.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/bugs.js:csvCell",
+      "type": "function",
+      "name": "csvCell",
+      "filePath": "lib/bugs.js",
+      "summary": "Function at lines 60-60; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/bugs.js:exportBugs",
+      "type": "function",
+      "name": "exportBugs",
+      "filePath": "lib/bugs.js",
+      "summary": "Function at lines 62-107; parameters: format.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 12-12; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 13-13; parameters: list.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:detectKind",
+      "type": "function",
+      "name": "detectKind",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 16-34; parameters: dir.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:findBuildableSubprojects",
+      "type": "function",
+      "name": "findBuildableSubprojects",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 51-71; parameters: root, maxDepth.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:findApks",
+      "type": "function",
+      "name": "findApks",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 73-86; parameters: dir.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:addProject",
+      "type": "function",
+      "name": "addProject",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 88-142; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:removeProject",
+      "type": "function",
+      "name": "removeProject",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 144-152; parameters: id.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:streamCommand",
+      "type": "function",
+      "name": "streamCommand",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 157-165; parameters: cmd, args, cwd, onLine.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:lib/projects.js:buildProject",
+      "type": "function",
+      "name": "buildProject",
+      "filePath": "lib/projects.js",
+      "summary": "Function at lines 168-189; parameters: project, onLine.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:$",
+      "type": "function",
+      "name": "$",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 2-2; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:api",
+      "type": "function",
+      "name": "api",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 3-8; parameters: url.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:connectWs",
+      "type": "function",
+      "name": "connectWs",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 12-26; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:showFrame",
+      "type": "function",
+      "name": "showFrame",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 27-34; parameters: blob.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:relPos",
+      "type": "function",
+      "name": "relPos",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 39-42; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:sendKey",
+      "type": "function",
+      "name": "sendKey",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 53-53; parameters: name.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:sendText",
+      "type": "function",
+      "name": "sendText",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 54-57; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:downloadScreenshot",
+      "type": "function",
+      "name": "downloadScreenshot",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 59-63; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:relaunch",
+      "type": "function",
+      "name": "relaunch",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 64-64; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:refreshDevice",
+      "type": "function",
+      "name": "refreshDevice",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 67-90; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:loadProjects",
+      "type": "function",
+      "name": "loadProjects",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 105-119; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:addProject",
+      "type": "function",
+      "name": "addProject",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 120-129; parameters: source.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:uploadApk",
+      "type": "function",
+      "name": "uploadApk",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 130-136; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:buildProject",
+      "type": "function",
+      "name": "buildProject",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 137-140; parameters: id.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:installProject",
+      "type": "function",
+      "name": "installProject",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 141-144; parameters: id.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:removeProject",
+      "type": "function",
+      "name": "removeProject",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 145-145; parameters: id.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:addBuild",
+      "type": "function",
+      "name": "addBuild",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 146-154; parameters: line, cls.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:addLogLine",
+      "type": "function",
+      "name": "addLogLine",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 159-170; parameters: line.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:togglePause",
+      "type": "function",
+      "name": "togglePause",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 171-171; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:clearLog",
+      "type": "function",
+      "name": "clearLog",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 172-172; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:setTab",
+      "type": "function",
+      "name": "setTab",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 175-179; parameters: name.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:setPlatform",
+      "type": "function",
+      "name": "setPlatform",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 180-185; parameters: p.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:loadBugs",
+      "type": "function",
+      "name": "loadBugs",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 188-211; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:openBugModal",
+      "type": "function",
+      "name": "openBugModal",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 212-220; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:closeBugModal",
+      "type": "function",
+      "name": "closeBugModal",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 221-221; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:submitBug",
+      "type": "function",
+      "name": "submitBug",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 222-231; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:toggleBug",
+      "type": "function",
+      "name": "toggleBug",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 232-232; parameters: id, status.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:deleteBug",
+      "type": "function",
+      "name": "deleteBug",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 233-233; parameters: id.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:exportBugs",
+      "type": "function",
+      "name": "exportBugs",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 234-234; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:fileCrashBug",
+      "type": "function",
+      "name": "fileCrashBug",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 235-239; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:hideToast",
+      "type": "function",
+      "name": "hideToast",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 240-240; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:loadIos",
+      "type": "function",
+      "name": "loadIos",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 244-252; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:saveIosToken",
+      "type": "function",
+      "name": "saveIosToken",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 253-256; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:uploadIos",
+      "type": "function",
+      "name": "uploadIos",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 257-265; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:playIos",
+      "type": "function",
+      "name": "playIos",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 266-270; parameters: publicKey, name.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:downloadWorkflow",
+      "type": "function",
+      "name": "downloadWorkflow",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 271-273; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:public/app.js:esc",
+      "type": "function",
+      "name": "esc",
+      "filePath": "public/app.js",
+      "summary": "Function at lines 275-275; parameters: s.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:server.js:loadSettings",
+      "type": "function",
+      "name": "loadSettings",
+      "filePath": "server.js",
+      "summary": "Function at lines 34-34; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:server.js:saveSettings",
+      "type": "function",
+      "name": "saveSettings",
+      "filePath": "server.js",
+      "summary": "Function at lines 35-35; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:server.js:broadcast",
+      "type": "function",
+      "name": "broadcast",
+      "filePath": "server.js",
+      "summary": "Function at lines 54-57; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:server.js:screenLoop",
+      "type": "function",
+      "name": "screenLoop",
+      "filePath": "server.js",
+      "summary": "Function at lines 62-68; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:server.js:ensureScreenLoop",
+      "type": "function",
+      "name": "ensureScreenLoop",
+      "filePath": "server.js",
+      "summary": "Function at lines 70-72; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:server.js:deployApk",
+      "type": "function",
+      "name": "deployApk",
+      "filePath": "server.js",
+      "summary": "Function at lines 161-175; parameters: apkPath, project.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "class:testapp/MainActivity.java:MainActivity",
+      "type": "class",
+      "name": "MainActivity",
+      "filePath": "testapp/MainActivity.java",
+      "summary": "Class declaration at lines 20-100; methods: lp, onCreate.",
+      "tags": [
+        "class",
+        "java"
+      ]
+    },
+    {
+      "id": "function:testapp/MainActivity.java:lp",
+      "type": "function",
+      "name": "lp",
+      "filePath": "testapp/MainActivity.java",
+      "summary": "Function at lines 23-28; parameters: h, weight.",
+      "tags": [
+        "function",
+        "java"
+      ]
+    },
+    {
+      "id": "function:testapp/MainActivity.java:onCreate",
+      "type": "function",
+      "name": "onCreate",
+      "filePath": "testapp/MainActivity.java",
+      "summary": "Function at lines 30-99; parameters: savedInstanceState.",
+      "tags": [
+        "function",
+        "java"
+      ]
+    },
+    {
+      "id": "function:testapp/verify-ws.js:send",
+      "type": "function",
+      "name": "send",
+      "filePath": "testapp/verify-ws.js",
+      "summary": "Function at lines 15-15; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    },
+    {
+      "id": "function:testapp/verify-ws.js:sleep",
+      "type": "function",
+      "name": "sleep",
+      "filePath": "testapp/verify-ws.js",
+      "summary": "Function at lines 16-16; parameters: none.",
+      "tags": [
+        "function",
+        "javascript"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:aapt2Path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:adb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:listAvds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:listDevices",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:startEmulator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:bootCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:deviceInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:screencap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:screenSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:inputTap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:inputSwipe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:inputKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:inputText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:apkBadging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:installApk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:launchApp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:stopApp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/android.js",
+      "target": "function:lib/android.js:streamLogcat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/bugs.js",
+      "target": "function:lib/bugs.js:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/bugs.js",
+      "target": "function:lib/bugs.js:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/bugs.js",
+      "target": "function:lib/bugs.js:createBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/bugs.js",
+      "target": "function:lib/bugs.js:updateBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/bugs.js",
+      "target": "function:lib/bugs.js:deleteBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/bugs.js",
+      "target": "function:lib/bugs.js:csvCell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/bugs.js",
+      "target": "function:lib/bugs.js:exportBugs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:detectKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:findBuildableSubprojects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:findApks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:addProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:removeProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:streamCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:lib/projects.js",
+      "target": "function:lib/projects.js:buildProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:$",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:connectWs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:showFrame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:relPos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:sendKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:sendText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:downloadScreenshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:relaunch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:refreshDevice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:loadProjects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:addProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:uploadApk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:buildProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:installProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:removeProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:addBuild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:addLogLine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:togglePause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:clearLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:setTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:setPlatform",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:loadBugs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:openBugModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:closeBugModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:submitBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:toggleBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:deleteBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:exportBugs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:fileCrashBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:hideToast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:loadIos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:saveIosToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:uploadIos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:playIos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:downloadWorkflow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:public/app.js",
+      "target": "function:public/app.js:esc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:loadSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:saveSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:broadcast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:screenLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:ensureScreenLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:deployApk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:testapp/MainActivity.java",
+      "target": "class:testapp/MainActivity.java:MainActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:testapp/MainActivity.java",
+      "target": "function:testapp/MainActivity.java:lp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:testapp/MainActivity.java",
+      "target": "function:testapp/MainActivity.java:onCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:testapp/verify-ws.js",
+      "target": "function:testapp/verify-ws.js:send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:testapp/verify-ws.js",
+      "target": "function:testapp/verify-ws.js:sleep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "file:lib/android.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:server.js",
+      "target": "file:lib/bugs.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:server.js",
+      "target": "file:lib/projects.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "function:lib/android.js:adb",
+      "target": "function:lib/android.js:run",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:listAvds",
+      "target": "function:lib/android.js:run",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:listDevices",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:bootCompleted",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:deviceInfo",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:screenSize",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:inputTap",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:inputSwipe",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:inputKey",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:inputText",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:apkBadging",
+      "target": "function:lib/android.js:aapt2Path",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:apkBadging",
+      "target": "function:lib/android.js:run",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:installApk",
+      "target": "function:lib/android.js:run",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:launchApp",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/android.js:stopApp",
+      "target": "function:lib/android.js:adb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:createBug",
+      "target": "function:lib/bugs.js:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:createBug",
+      "target": "function:lib/bugs.js:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:updateBug",
+      "target": "function:lib/bugs.js:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:updateBug",
+      "target": "function:lib/bugs.js:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:deleteBug",
+      "target": "function:lib/bugs.js:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:deleteBug",
+      "target": "function:lib/bugs.js:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:exportBugs",
+      "target": "function:lib/bugs.js:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/bugs.js:exportBugs",
+      "target": "function:lib/bugs.js:csvCell",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:findBuildableSubprojects",
+      "target": "function:lib/projects.js:detectKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:addProject",
+      "target": "function:lib/projects.js:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:addProject",
+      "target": "function:lib/projects.js:detectKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:addProject",
+      "target": "function:lib/projects.js:findBuildableSubprojects",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:addProject",
+      "target": "function:lib/projects.js:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:removeProject",
+      "target": "function:lib/projects.js:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:removeProject",
+      "target": "function:lib/projects.js:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:buildProject",
+      "target": "function:lib/projects.js:streamCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:lib/projects.js:buildProject",
+      "target": "function:lib/projects.js:findApks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:server.js:deployApk",
+      "target": "function:server.js:broadcast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:connectWs",
+      "target": "function:public/app.js:showFrame",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:connectWs",
+      "target": "function:public/app.js:addLogLine",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:connectWs",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:connectWs",
+      "target": "function:public/app.js:addBuild",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:connectWs",
+      "target": "function:public/app.js:refreshDevice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:showFrame",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:relPos",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:sendText",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:downloadScreenshot",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:relaunch",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:refreshDevice",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:refreshDevice",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadProjects",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadProjects",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadProjects",
+      "target": "function:public/app.js:esc",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:addProject",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:addProject",
+      "target": "function:public/app.js:addBuild",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:addProject",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:addProject",
+      "target": "function:public/app.js:loadProjects",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:uploadApk",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:uploadApk",
+      "target": "function:public/app.js:loadProjects",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:uploadApk",
+      "target": "function:public/app.js:addBuild",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:buildProject",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:buildProject",
+      "target": "function:public/app.js:addBuild",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:installProject",
+      "target": "function:public/app.js:addBuild",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:installProject",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:installProject",
+      "target": "function:public/app.js:refreshDevice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:removeProject",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:removeProject",
+      "target": "function:public/app.js:loadProjects",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:addBuild",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:addLogLine",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:togglePause",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:setTab",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:setPlatform",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:setPlatform",
+      "target": "function:public/app.js:loadIos",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadBugs",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadBugs",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadBugs",
+      "target": "function:public/app.js:esc",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:openBugModal",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:closeBugModal",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:submitBug",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:submitBug",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:submitBug",
+      "target": "function:public/app.js:closeBugModal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:submitBug",
+      "target": "function:public/app.js:loadBugs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:submitBug",
+      "target": "function:public/app.js:setTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:toggleBug",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:toggleBug",
+      "target": "function:public/app.js:loadBugs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:deleteBug",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:deleteBug",
+      "target": "function:public/app.js:loadBugs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:exportBugs",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:fileCrashBug",
+      "target": "function:public/app.js:hideToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:fileCrashBug",
+      "target": "function:public/app.js:openBugModal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:hideToast",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadIos",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadIos",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:loadIos",
+      "target": "function:public/app.js:esc",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:saveIosToken",
+      "target": "function:public/app.js:api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:saveIosToken",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:saveIosToken",
+      "target": "function:public/app.js:loadIos",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:uploadIos",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:uploadIos",
+      "target": "function:public/app.js:loadIos",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:uploadIos",
+      "target": "function:public/app.js:playIos",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:playIos",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:public/app.js:downloadWorkflow",
+      "target": "function:public/app.js:$",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    },
+    {
+      "source": "function:testapp/MainActivity.java:onCreate",
+      "target": "function:testapp/MainActivity.java:lp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.65
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:overview",
+      "name": "Docs and Project Setup",
+      "description": "Project purpose, setup instructions, and contributor guidance.",
+      "nodeIds": [
+        "config:.github/ISSUE_TEMPLATE/bug_report.yml",
+        "config:.github/ISSUE_TEMPLATE/config.yml",
+        "config:.github/ISSUE_TEMPLATE/feature_request.yml",
+        "document:CONTRIBUTING.md",
+        "document:README.md",
+        "config:package.json"
+      ]
+    },
+    {
+      "id": "layer:server",
+      "name": "Local Server and Browser UI",
+      "description": "Express HTTP/WebSocket server and browser interface for device interaction.",
+      "nodeIds": [
+        "file:public/app.js",
+        "file:public/index.html",
+        "file:public/style.css",
+        "file:server.js",
+        "function:public/app.js:$",
+        "function:public/app.js:api",
+        "function:public/app.js:connectWs",
+        "function:public/app.js:showFrame",
+        "function:public/app.js:relPos",
+        "function:public/app.js:sendKey",
+        "function:public/app.js:sendText",
+        "function:public/app.js:downloadScreenshot",
+        "function:public/app.js:relaunch",
+        "function:public/app.js:refreshDevice",
+        "function:public/app.js:loadProjects",
+        "function:public/app.js:addProject",
+        "function:public/app.js:uploadApk",
+        "function:public/app.js:buildProject",
+        "function:public/app.js:installProject",
+        "function:public/app.js:removeProject",
+        "function:public/app.js:addBuild",
+        "function:public/app.js:addLogLine",
+        "function:public/app.js:togglePause",
+        "function:public/app.js:clearLog",
+        "function:public/app.js:setTab",
+        "function:public/app.js:setPlatform",
+        "function:public/app.js:loadBugs",
+        "function:public/app.js:openBugModal",
+        "function:public/app.js:closeBugModal",
+        "function:public/app.js:submitBug",
+        "function:public/app.js:toggleBug",
+        "function:public/app.js:deleteBug",
+        "function:public/app.js:exportBugs",
+        "function:public/app.js:fileCrashBug",
+        "function:public/app.js:hideToast",
+        "function:public/app.js:loadIos",
+        "function:public/app.js:saveIosToken",
+        "function:public/app.js:uploadIos",
+        "function:public/app.js:playIos",
+        "function:public/app.js:downloadWorkflow",
+        "function:public/app.js:esc",
+        "function:server.js:loadSettings",
+        "function:server.js:saveSettings",
+        "function:server.js:broadcast",
+        "function:server.js:screenLoop",
+        "function:server.js:ensureScreenLoop",
+        "function:server.js:deployApk"
+      ]
+    },
+    {
+      "id": "layer:device",
+      "name": "Android Device Integration",
+      "description": "Android SDK integration and the included probe app used by the local workflow.",
+      "nodeIds": [
+        "file:lib/android.js",
+        "config:testapp/AndroidManifest.xml",
+        "file:testapp/MainActivity.java",
+        "file:testapp/build.sh",
+        "resource:testapp/probe.apk",
+        "file:testapp/verify-ws.js",
+        "function:lib/android.js:aapt2Path",
+        "function:lib/android.js:run",
+        "function:lib/android.js:adb",
+        "function:lib/android.js:listAvds",
+        "function:lib/android.js:listDevices",
+        "function:lib/android.js:startEmulator",
+        "function:lib/android.js:bootCompleted",
+        "function:lib/android.js:deviceInfo",
+        "function:lib/android.js:screencap",
+        "function:lib/android.js:screenSize",
+        "function:lib/android.js:inputTap",
+        "function:lib/android.js:inputSwipe",
+        "function:lib/android.js:inputKey",
+        "function:lib/android.js:inputText",
+        "function:lib/android.js:apkBadging",
+        "function:lib/android.js:installApk",
+        "function:lib/android.js:launchApp",
+        "function:lib/android.js:stopApp",
+        "function:lib/android.js:streamLogcat",
+        "class:testapp/MainActivity.java:MainActivity",
+        "function:testapp/MainActivity.java:lp",
+        "function:testapp/MainActivity.java:onCreate",
+        "function:testapp/verify-ws.js:send",
+        "function:testapp/verify-ws.js:sleep"
+      ]
+    },
+    {
+      "id": "layer:projects",
+      "name": "Project Intake and Builds",
+      "description": "Local, GitHub, or APK project intake and build/install operations.",
+      "nodeIds": [
+        "file:lib/projects.js",
+        "function:lib/projects.js:load",
+        "function:lib/projects.js:save",
+        "function:lib/projects.js:detectKind",
+        "function:lib/projects.js:findBuildableSubprojects",
+        "function:lib/projects.js:findApks",
+        "function:lib/projects.js:addProject",
+        "function:lib/projects.js:removeProject",
+        "function:lib/projects.js:streamCommand",
+        "function:lib/projects.js:buildProject"
+      ]
+    },
+    {
+      "id": "layer:bugs",
+      "name": "Bug Evidence and Export",
+      "description": "Structured bug records, screenshot persistence, log context, and export.",
+      "nodeIds": [
+        "file:lib/bugs.js",
+        "function:lib/bugs.js:load",
+        "function:lib/bugs.js:save",
+        "function:lib/bugs.js:createBug",
+        "function:lib/bugs.js:updateBug",
+        "function:lib/bugs.js:deleteBug",
+        "function:lib/bugs.js:csvCell",
+        "function:lib/bugs.js:exportBugs"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Workspace Overview",
+      "description": "README.md introduces the local device-testing workspace and explains its Android interaction, project intake, logs, crash capture, bug tracking, exports, and cloud iOS lane. It distinguishes the local Node server from the external simulator workflow.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Server Composition",
+      "description": "server.js creates the Express app and WebSocket endpoint, serves the browser UI, initializes runtime data directories, and connects Android, project, and bug modules. This is the composition point for the local workflow.",
+      "nodeIds": [
+        "file:server.js"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Browser Controls",
+      "description": "The browser code renders device frames, sends touch and key input, follows log/build events, manages project and bug views, and exposes the iOS lane. It communicates with the local API and WebSocket route.",
+      "nodeIds": [
+        "file:public/app.js",
+        "file:public/index.html",
+        "file:public/style.css"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Android Bridge",
+      "description": "The Android module wraps adb and emulator commands for device discovery, screen capture, input, APK install/launch, and logcat. Server-side WebSocket handling uses this bridge to stream the device and forward controls.",
+      "nodeIds": [
+        "file:lib/android.js",
+        "file:server.js"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Project Intake",
+      "description": "The project module classifies local/mobile project shapes, clones repositories or receives APKs, runs available build commands, locates APK outputs, then installs and launches them through the Android bridge. Runtime clones live under the ignored workspace directory.",
+      "nodeIds": [
+        "file:lib/projects.js"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Bug Evidence",
+      "description": "The bug module persists structured reports as JSON, stores screenshots, captures log and device context supplied by the server, and exports Markdown, CSV, JSON, or ZIP artifacts. Runtime data is ignored and is not part of this graph.",
+      "nodeIds": [
+        "file:lib/bugs.js"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Probe Application",
+      "description": "The included Android probe app provides basic interaction and a deliberate crash path for a local smoke workflow. Its script and WebSocket helper support rebuilding or exercising the prototype, but no such run was performed for this graph task.",
+      "nodeIds": [
+        "file:testapp/MainActivity.java",
+        "file:testapp/build.sh",
+        "file:testapp/verify-ws.js"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Contributor Workflow",
+      "description": "CONTRIBUTING.md records setup expectations and the manual AVD smoke workflow for changes to Android integration. Use it alongside the README before extending this deliberately small prototype.",
+      "nodeIds": [
+        "document:CONTRIBUTING.md"
+      ]
+    }
+  ]
+}
